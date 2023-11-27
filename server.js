@@ -3,11 +3,11 @@ const express = require("express");
 const app = express();
 
 // Add all static files in the root directory
-app.use(express.static("."));
+app.use(express.static("client"));
 
-app.get('/data', (req, resp) =>
+app.get("/data", (req, resp) =>
 {
-	const serverData = "Hello, World!"
+	const serverData = "Hello, World!";
     resp.send(serverData);
 });
 

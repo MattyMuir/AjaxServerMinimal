@@ -5,7 +5,7 @@ async function ButtonClicked()
 	try
 	{
 		const response = await fetch("http://localhost:8080/data");
-		if (!response.ok) throw TypeError // Propagate 404 as exception
+		if (!response.ok) throw TypeError; // Propagate 404 as exception
 
 		const body = await response.text();
 		document.getElementById("console").innerHTML = body;
