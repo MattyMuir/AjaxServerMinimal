@@ -7,6 +7,7 @@ async function ButtonClicked()
 		const response = await fetch("http://localhost:8080/data");
 		if (!response.ok) throw TypeError; // Propagate 404 as exception
 
+		// Success handling here
 		const body = await response.text();
 		document.getElementById("console").innerHTML = body;
 	}
@@ -14,7 +15,7 @@ async function ButtonClicked()
 	{
 		if (!(exception instanceof TypeError)) throw exception;
 
-		// Error handling here!
+		// Error handling here
 		document.getElementById("console").innerHTML = "Unable to fetch";
 	}
 }
